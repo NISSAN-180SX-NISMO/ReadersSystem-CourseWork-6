@@ -42,9 +42,9 @@ public:
 private:
 	struct node 
 	{
-		reader Reader;
-		std::string key;
-		node* next = nullptr;
+		reader Reader;			// значение
+		std::string key;		// ключ
+		node* next = nullptr;	// указатель на след. эл.
 	};
 	std::vector<node*> Table;
 	node* set(const reader& Reader, node* current) {

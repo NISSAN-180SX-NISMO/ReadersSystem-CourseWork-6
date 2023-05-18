@@ -66,7 +66,7 @@ public:
 	}
 private:
 	struct node {
-		book Book;
+		book Book;		
 		int key;
 		node* left = nullptr, * right = nullptr;
 		int height = 1;
