@@ -165,8 +165,10 @@ public:
 	}
 	void set(archive Archive) 
 	{
-		if (!Head)
-			Head = Tail = new node{ Archive, Hash(Archive.code), Head };
+		if (!Head) {
+			Head = Tail = new node{ Archive, Hash(Archive.code) };
+			Head->next = Tail->next = Head;
+		}
 		else if (Head->next == Head)
 			Head->next = Tail = new node{ Archive, Hash(Archive.code), Head };
 		else {
